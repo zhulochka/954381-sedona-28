@@ -24,7 +24,7 @@
     </header>
 
     <main>
-      <h1>Сервис поиска жилья в городке Седона</h1>
+      <h1 class="visually-hidden">Сервис поиска жилья в городке Седона</h1>
       <img src="img/welcome.svg" width="456" height="350"
         lang="en" alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks!">
       <p>Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
@@ -91,15 +91,50 @@
         </ol>
       </section>
       <section>
-        <h2>Раздел поиска гостиниц</h2>
+        <h2 class="visually-hidden">Раздел поиска гостиниц</h2>
         <p>Заинтересовались?</p>
         <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в
           Cедоне</p>
         <button type="button">Поиск гостиницы в Седоне</button>
-        <!--здесь будет форма-->
+        <!---форма-->
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <p>
+            <label for="datein">Дата заезда:</label>
+            <input id="datein" type="text" name="datein" value="24 апреля 2017" aria-label="поле ввода даты заезда">
+            <button type="button" aria-label="отметить в календаре дату заезда">
+              <span class="visually-hidden">календарь</span>
+            </button>
+          </p>
+          <p>
+            <label for="dateout">Дата выезда:</label>
+            <input id="dateout" type="text" name="dateout" value="4 июля 2017" aria-label="поле ввода даты выезда">
+            <button type="button" aria-label="отметить в календаре дату выезда">
+              <span class="visually-hidden">календарь</span>
+            </button>
+          </p>
+          <p>
+            <label for="number-adult">Взрослые:</label>
+            <button type="button" aria-label="уменьшить количество взрослых">
+              <span class="visually-hidden">-</span>
+            </button>
+            <input id="number-adult" type="number" name="number-adult" value="2" aria-label="поле для ввода количества взрослых">
+            <button type="button" aria-label="увеличить количество взрослых">
+              <span class="visually-hidden">+</span>
+            </button>
+            <label for="number-children">Дети:</label>
+            <button type="button" aria-label="уменьшить количество детей">
+              <span class="visually-hidden">-</span>
+            </button>
+            <input id="number-children" type="number" name="number-children" value="0" aria-label="поле для ввода количества детей">
+            <button type="button" aria-label="увеличить количество детей">
+              <span class="visually-hidden">+</span>
+            </button>
+          </p>
+          <button type="submit" aria-label="показать предложения гостиниц в Седоне">Найти</button>
+        </form>
       </section>
       <section>
-        <h2>Как до нас добраться</h2>
+        <h2 class="visually-hidden">Как до нас добраться</h2>
         <p>
           <img src="img/map.jpg" width="1199" height="594" alt="карта проезда в Седону">
         </p>
@@ -108,13 +143,29 @@
 
     <footer>
       <section>
-        <h2>Наши контакты</h2>
+        <h2 class="visually-hidden">Наши контакты</h2>
         <p lang="en">#visitSEDONA</p>
-        <p>тел: +7(495) 666-01-66</p>
+        <p>
+          тел:
+          <a href="tel:+7456660166" aria-label="телефон для связи">+7(495) 666-01-66</a>
+        </p>
+
         <ul>
-          <li><a href="https://twitter.com/">Седона в Твиттере</a></li>
-          <li><a href="https://www.facebook.com/">Седона в Фейсбуке</a></li>
-          <li><a href="https://www.youtube.com/">Седона в Ютьюбе</a></li>
+          <li>
+            <a href="https://twitter.com/">
+              <span class="visually-hidden">Седона в Твиттере</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/">
+              <span class="visually-hidden">Седона в Фейсбуке</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/">
+              <span class="visually-hidden">Седона в Ютьюбе</span>
+            </a>
+          </li>
         </ul>
       </section>
       <p lang="en">
