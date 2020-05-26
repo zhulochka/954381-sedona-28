@@ -28,11 +28,83 @@
       <h1 class="visually-hidden">Гостиницы в городке Седона</h1>
       <section>
         <h2 class="visually-hidden">Подбор гостиниц по параметрам</h2>
-        <!--здесь будет форма подбора гостиниц-->
+        <!-- форма подбора гостиниц-->
+        <form method="get" action="https://echo.htmlacademy.ru">
+          <fieldset>
+            <legend>Инфраструктура:</legend>
+            <ul>
+              <li>
+                <input type="checkbox" name="pool" id="filter-pool" checked>
+                <label for="filter-pool">Бассейн</label>
+              </li>
+              <li>
+                <input type="checkbox" name="parking" id="filter-parking">
+                <label for="filter-parking">Парковка</label>
+              </li>
+              <li lang="en">
+                <input type="checkbox" name="Wi-Fi" id="filter-Wi-Fi">
+                <label for="filter-Wi-Fi">Wi-Fi</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Тип жилья:</legend>
+            <ul>
+              <li>
+                <input type="checkbox" name="hotel" id="filter-hotel" checked>
+                <label for="filter-hotel">Гостиница</label>
+              </li>
+              <li>
+                <input type="checkbox" name="motel" id="filter-motel" checked>
+                <label for="filter-motel">Мотель</label>
+              </li>
+              <li>
+                <input type="checkbox" name="apartments" id="filter-apartments" checked>
+                <label for="filter-apartments">Апартаменты</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>
+              <label for="range-price-min">Стоимость в сутки (Р):</label>
+            </legend>
+            <p>
+              <label>
+                от
+                <input type="number" min="0" value="0" id="input-price-min"
+                  aria-label="ввести нижнюю границу диапазона цены">
+              </label>
+              <label>
+                до
+                <input type="number" min="0" value="3000" id="input-price-max"
+                  aria-label="ввести верхнюю границу диапазона цены">
+              </label>
+            </p>
+            <input type="range" min="0" value="0" id="range-price-min"
+              aria-label="двигать вправо или влево чтобы выбрать нижнюю границу диапазона цены">
+            <input type="range" value="3000" id="range-price-max"
+              aria-label="двигать вправо или влево чтобы выбрать верхнюю границу диапазона цены ">
+          </fieldset>
+          <button type="submit" aria-label="показать гостиницы по выбранным параметрам">
+            Показать
+          </button>
+        </form>
       </section>
       <section>
         <h2 class="visually-hidden">Сортировка списка гостиниц</h2>
-        <!--здесь будет сортировка списка гостиниц-->
+        <!-- сортировка списка гостиниц-->
+        <p>Найдено: 3</p>
+        <p>Сортировка:</p>
+        <ul>
+          <li><a href="#"><span class="visually-hidden">сортировка </span>По цене</a></li>
+          <li><a href="#"><span class="visually-hidden">сортировка </span>По типу</a></li>
+          <li><a href="#"><span class="visually-hidden">сортировка </span>По рейтингу</a></li>
+        </ul>
+        <ul>
+          <li><a href="#"><span class="visually-hidden">сортировка по возрастанию</span></a></li>
+          <li><a href="#"><span class="visually-hidden">сортировка по убыванию</span></a></li>
+        </ul>
+
       </section>
       <section>
         <h2 class="visually-hidden">Список гостиниц</h2>
@@ -119,7 +191,10 @@
         Website by
         <a href="https://htmlacademy.ru/intensive/htmlcss">
           <img src="img/logo-htmlacademy.svg" width="115" height="41"
-            lang="en" alt="HTML Academy">
+            alt="HTML Academy">
+            <span class="visually-hidden">
+              Website by HTML Academy
+            </span>
         </a>
       </p>
     </footer>
