@@ -1,0 +1,326 @@
+/* Variables */
+
+:root {
+  --white: #FFFFFF; /*background-page, filter-text, range-line-full, check-box-standard, background-input-focus */
+  --background-basic: #EEEEEE; /* 3-4-5-features, background-mountain, background-map, */
+  --background-other: #F2F2F2; /*background-left-right, background-input-standard, background-rating */
+  --small-text: #333333; /*small-text-index */
+  --box-shadow-all: rgba(0,1,1,0.2); /*box-shadow-all*/
+  --box-shadow-form: rgba(0,1,1,0.15); /*box-shadow index-form */
+  --input-hover: #EBEBEB; /*background-input-hover*/
+  --border:#E5E5E5; /*input-border-focus, catalog-border*/
+  --form-icon: #A9A9A9; /*form-icon-standard-index*/
+  --checkbox-blocked: #6A6A6A;
+  --range-round: #ABABAB; /*range-round*/
+  --scale-text-opacity: rgba(255,255,255,0.3); /*scale-text-opacity*/
+  --sorting-icon: #CACACA; /*sorting-icon-standard*/
+  --rating-text: #666666; /*rating-text*/
+
+  --footer:rgba(255,255,255,0.9); /*footer*/
+  --html-academy: #231F20; /*html-academy-standard*/
+  --html-academy-active: #BDBBBC; /*html-academy-active*/
+
+  --button-2-hover: #604E43; /*button-2-hover*/
+  --button-2-active: #503E33; /*button-2-active*/
+  --extra-color: #766357; /*button-2-standard, menu-link-active */
+
+  --button-1-hover: #669EC0; /*button-1-hover, socials-icon-hover*/
+  --button-1-active: #5496BD; /*button-1-active, socials-icon-active*/
+  --theme-color: #81B3D2; /*button-1-standard, socials-icon-standard, stars, background hotels, menu-link-hover,
+                      sorting-link-active-hover, sorting-icon-active, card-link-hover, form-icon-active
+                      html-academy-hover*/
+  --black: #000000; /*big text, sorting-icon-hover, card-link-standard, form-icon-hover*/
+}
+
+/* Global */
+
+body {
+  min-width: 1220px;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: var(--black);
+  text-transform: uppercase;
+  background-color: var(--background-other);
+
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.header {
+  background-color: var(--white);
+}
+
+.container-logo {
+  text-align: center;
+  background-color: var(--theme-color);
+}
+
+/* Main navigation */
+
+.main-navigation {
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.navigation-list {
+  list-style: none;
+}
+
+.navigation-list li:nth-child(1),
+.navigation-list li:nth-child(2) {
+  text-align: left;
+}
+
+.navigation-list li:nth-child(n+3) {
+  text-align: right;
+}
+
+.navigation-list a:not([href]) {
+  color: var(--extra-color);
+}
+
+.navigation-list a {
+  color: var(--black);
+}
+
+.navigation-list a:hover,
+.navigation-list a:focus {
+  color: var(--theme-color);
+}
+
+.navigation-list a:active {
+  color: var(--black);
+  opacity: 0.3;
+}
+
+/* Introduction */
+
+.introduction {
+  text-align: center;
+}
+
+.introduction p {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  background-color: var(--white);
+}
+
+.introduction-picture {
+  background-color: var(--background-basic);
+  background-image: url("../img/mountain-landscape.jpg");
+  background-position: center, 0 0;
+  background-repeat: no-repeat;
+}
+
+/* Search hotels */
+
+.search-hotels {
+  background-color: var(--white);
+  text-align: center;
+  line-height: 24px;
+}
+
+.question {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+p.question + p {
+  color: var(--small-text);
+}
+
+.search-hotels button {
+  font-size: 21px;
+  line-height: 26px;
+}
+
+/* Button */
+
+.button {
+  font-weight: 700;
+  text-align: center;
+  color: var(--white);
+  vertical-align: middle;
+  text-transform: uppercase;
+  border: none;
+}
+
+.button-1 {
+  background-color: var(--theme-color);
+}
+
+.button-1:hover,
+.button-1:focus {
+  background-color: var(--button-1-hover);
+}
+
+.button-1:active {
+  color: var(--scale-text-opacity);
+  background-color: var(--button-1-active);
+}
+
+.button-2 {
+  background-color: var(--extra-color);
+}
+
+.button-2:hover,
+.button-2:focus {
+  background-color: var(--button-2-hover);
+}
+
+.button-2:active {
+  color: var(--scale-text-opacity);
+  background-color: var(--button-2-active);
+}
+
+/* Search-form */
+
+.search-form {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+  background-color: var(--white);
+  box-shadow: 0px 7px 15px var(--box-shadow-form);
+}
+
+.search-item input {
+  background-color: var(--background-other);
+  border: 0;
+}
+
+.search-item input:hover {
+  background-color: var(--input-hover);
+}
+
+.search-item input:focus {
+  background-color: var(--white);
+  border: 2px solid var(--border);
+}
+
+/* Map */
+
+.map {
+  background-color: var(--background-other);
+  text-align: center;
+}
+
+/* Footer */
+
+.footer {
+  line-height: 26px;
+  text-align: center;
+  color: var(--black);
+  background-color: var(--footer);
+}
+
+.footer-contacts {
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.footer-contacts a {
+  color: var(--black);
+}
+
+.footer-contacts a:hover,
+.footer-contacts a:focus {
+  color: var(--theme-color);
+}
+.footer-contacts a:active {
+  color: var(--black);
+  opacity: 0.3;
+}
+
+.footer-social {
+  list-style: none;
+}
+
+/* Social button */
+
+.social-button {
+  background-color: var(--theme-color);
+}
+
+/* Copyright */
+
+.footer-copyright a {
+  color: var(--white);
+}
+
+.footer-copyright a:hover,
+.footer-copyright a:focus {
+  color: var(--theme-color);
+}
+
+.footer-copyright a:active {
+  color: var(--html-academy-active);
+}
+
+/* Catalog */
+
+.catalog {
+  background-color: var(--white);
+}
+
+.catalog-list {
+  list-style: none;
+}
+
+a.item-link {
+  color: var(--basic-black);
+}
+
+a.item-link:hover,
+a.item-link:focus {
+  color: var(--theme-color);
+}
+a.item-link:active {
+  color: var(--black);
+  opacity: 0.3;
+}
+
+.catalog-item h3 {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.catalog-item span {
+  color: var(--small-text);
+}
+
+.rating {
+  color: var(--rating-text);
+  background-color: var(--background-other);
+}
+
+
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+
+
+

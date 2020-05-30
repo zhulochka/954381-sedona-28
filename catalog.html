@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="ru">
-
   <head>
     <meta charset="utf-8">
     <title>Гостиницы</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
 
   <body>
-    <header>
-      <div>
-        <a href="index.html">
+    <header class="header">
+      <div class="container-logo">
+        <a class="header-logo" href="index.html">
           <img src="img/logo-sedona.svg" width="138" height="70"
             alt="Логотип компании Седона">
         </a>
       </div>
-      <nav>
-        <ul>
+      <nav class="main-navigation">
+        <ul class="navigation-list">
           <li><a href="#">Информация</a></li>
           <li><a href="#">Фото и видео</a></li>
           <li><a href="#">Карта штата</a></li>
@@ -24,12 +26,12 @@
       </nav>
     </header>
 
-    <main>
+    <main class="container">
       <h1 class="visually-hidden">Гостиницы в городке Седона</h1>
-      <section>
+      <section class="filters">
         <h2 class="visually-hidden">Подбор гостиниц по параметрам</h2>
         <!-- форма подбора гостиниц-->
-        <form method="get" action="https://echo.htmlacademy.ru">
+        <form class="filter" method="get" action="https://echo.htmlacademy.ru">
           <fieldset>
             <legend>Инфраструктура:</legend>
             <ul>
@@ -90,7 +92,7 @@
           </button>
         </form>
       </section>
-      <section>
+      <section  class="sorting">
         <h2 class="visually-hidden">Сортировка списка гостиниц</h2>
         <!-- сортировка списка гостиниц-->
         <p>Найдено: 3</p>
@@ -104,90 +106,96 @@
           <li><a href="#"><span class="visually-hidden">сортировка по возрастанию</span></a></li>
           <li><a href="#"><span class="visually-hidden">сортировка по убыванию</span></a></li>
         </ul>
-
       </section>
-      <section>
+      <section class="catalog">
         <h2 class="visually-hidden">Список гостиниц</h2>
-        <ul>
-          <li>
+        <ul class="catalog-list">
+          <li class="catalog-item">
             <p>
               <a href="#">
                 <img src="img/amara-resort-spa.jpg" width="135" height="90" alt="фотография территории гостиницы">
               </a>
             </p>
-            <a href="#">
-              <h3 lang="en">Amara Resort &amp; Spa</h3>
-            </a>
+            <h3 lang="en">
+              <a class="item-link" href="#">
+                Amara Resort &amp; Spa
+              </a>
+            </h3>
             <span>Гостиница</span>
             <span>от 2 900 Р.</span>
-            <a href="#">Подробнее</a>
-            <a href="#">Забронировать</a>
+            <a class="button button-1" href="#">Подробнее</a>
+            <a class="button button-2" href="#">Забронировать</a>
             <p class="visually-hidden">Звездная классификация гостиницы: 4 звезды</p>
-            <p>Рейтинг:8,5</p>
+            <p class="rating">Рейтинг:8,5</p>
           </li>
-          <li>
+          <li class="catalog-item">
             <p>
               <a href="#">
                 <img src="img/desert-quail-inn.jpg" width="135" height="90" alt="фотография территории мотеля">
               </a>
             </p>
-            <a href="#">
-              <h3 lang="en">Desert Quail Inn</h3>
-            </a>
+            <h3 lang="en">
+              <a class="item-link" href="#">
+                Desert Quail Inn
+              </a>
+            </h3>
             <span>Мотель</span>
             <span>от 3 000 Р.</span>
-            <a href="#">Подробнее</a>
-            <a href="#">Забронировать</a>
+            <a class="button button-1" href="#">Подробнее</a>
+            <a class="button button-2" href="#">Забронировать</a>
             <p class="visually-hidden">Звездная классификация гостиницы: 3 звезды</p>
-            <p>Рейтинг:8,9</p>
+            <p class="rating">Рейтинг:8,9</p>
           </li>
-          <li>
+          <li class="catalog-item">
             <p>
               <a href="#">
                 <img src="img/villas-at-poco-diablo.jpg" width="135" height="90" alt="фотография территории апартаментов">
               </a>
             </p>
-            <a href="#">
-              <h3 lang="en">Villas at Poco Diablo</h3>
-            </a>
+            <h3 lang="en">
+              <a class="item-link" href="#">
+                Villas at Poco Diablo
+              </a>
+            </h3>
             <span>Апартаменты</span>
             <span>от 2 000 Р.</span>
-            <a href="#">Подробнее</a>
-            <a href="#">Забронировать</a>
+            <a class="button button-1" href="#">Подробнее</a>
+            <a class="button button-2" href="#">Забронировать</a>
             <p class="visually-hidden">Звездная классификация гостиницы: 2 звезды</p>
-            <p>Рейтинг:9,2</p>
+            <p class="rating">Рейтинг:9,2</p>
           </li>
         </ul>
       </section>
     </main>
 
-    <footer>
-      <section>
+    <footer  class="footer">
+      <section class="footer-contacts">
         <h2 class="visually-hidden">Наши контакты</h2>
         <p lang="en">#visitSEDONA</p>
         <p>
           тел:
           <a href="tel:+74956660166" aria-label="телефон для связи +74956660166">+7(495) 666-01-66</a>
         </p>
-        <ul>
+
+        <ul class="footer-social">
           <li>
-            <a href="https://twitter.com/">
+            <a class="social-button" href="https://twitter.com/">
               <span class="visually-hidden">Седона в Твиттере</span>
             </a>
           </li>
           <li>
-            <a href="https://www.facebook.com/">
+            <a class="social-button" href="https://www.facebook.com/">
               <span class="visually-hidden">Седона в Фейсбуке</span>
             </a>
           </li>
           <li>
-            <a href="https://www.youtube.com/">
+            <a class="social-button" href="https://www.youtube.com/">
               <span class="visually-hidden">Седона в Ютьюбе</span>
             </a>
           </li>
         </ul>
       </section>
-      <p lang="en">
+      <p class="footer-copyright" lang="en">
         Website by
         <a href="https://htmlacademy.ru/intensive/htmlcss">
           <img src="img/logo-htmlacademy.svg" width="115" height="41"
