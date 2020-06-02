@@ -144,6 +144,7 @@ img {
 
 .features h3,h4{
   font-size: 21px;
+  color: var(--black);
 }
 
 ol.features-list > li:nth-child(1),
@@ -152,14 +153,19 @@ ol.features-list > li:nth-child(2) {
   background-color: var(--theme-color);
 }
 
+ol.features-list > li:nth-child(1) > h3,
+ol.features-list > li:nth-child(2) > h3 {
+  color: var(--white);
+}
+
 .features-list-extra {
   color: var(--small-text);
   background-color: var(--white);
   list-style: none;
 }
 
-.features-list-extra h4{
-  color: var(--black);
+ol.features-list > li:nth-child(n+3) {
+  background-color: var(--background-basic);
 }
 
 /* Search hotels */
