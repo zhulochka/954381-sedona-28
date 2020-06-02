@@ -2,7 +2,9 @@
 
 :root {
   --white: #FFFFFF; /*background-page, filter-text, range-line-full, check-box-standard, background-input-focus */
-  --background-basic: #EEEEEE; /* 3-4-5-features, background-mountain, background-map, */
+  --background-basic: #EEEEEE; /*3-4-5-features*/
+  --background-mountain:#B38B84; /*background-mountain*/
+  --background-map:#CBDDA9; /*background-map*/
   --background-other: #F2F2F2; /*background-left-right, background-input-standard, background-rating */
   --small-text: #333333; /*small-text-index */
   --box-shadow-all: rgba(0,1,1,0.2); /*box-shadow-all*/
@@ -30,6 +32,7 @@
                       sorting-link-active-hover, sorting-icon-active, card-link-hover, form-icon-active
                       html-academy-hover*/
   --black: #000000; /*big text, sorting-icon-hover, card-link-standard, form-icon-hover*/
+  --sorting-link: rgba(0, 0, 0, 0.3); /*sorting-link*/
 }
 
 /* Global */
@@ -38,14 +41,14 @@ body {
   min-width: 1220px;
   margin: 0;
   padding: 0;
-  font-family: "PT Sans", Arial, sans-serif;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
-  color: var(--black);
+  font-family: "PT Sans", Arial, sans-serif;
   text-transform: uppercase;
+  color: var(--small-text);
   background-color: var(--background-other);
-
+  box-shadow: 0px 5px 15px var(--box-shadow-all);
 }
 
 a {
@@ -59,11 +62,6 @@ img {
 
 .header {
   background-color: var(--white);
-}
-
-.container-logo {
-  text-align: center;
-  background-color: var(--theme-color);
 }
 
 /* Main navigation */
@@ -106,6 +104,10 @@ img {
 
 /* Introduction */
 
+.main {
+  background-color: var(--white)
+}
+
 .introduction {
   text-align: center;
 }
@@ -114,31 +116,63 @@ img {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
-  background-color: var(--white);
-}
+  color: var(--black);
+ }
 
 .introduction-picture {
-  background-color: var(--background-basic);
+  background-color: var(--background-mountain);
   background-image: url("../img/mountain-landscape.jpg");
-  background-position: center, 0 0;
+  background-position: center bottom;
   background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Features */
+
+.features {
+  text-align: center;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+.features h2{
+  font-size: inherit;
+  line-height: 26px;
+  font-weight: inherit;
+}
+
+.features h3,h4{
+  font-size: 21px;
+}
+
+ol.features-list > li:nth-child(1),
+ol.features-list > li:nth-child(2) {
+  color: var(--white);
+  background-color: var(--theme-color);
+}
+
+.features-list-extra {
+  color: var(--small-text);
+  background-color: var(--white);
+  list-style: none;
+}
+
+.features-list-extra h4{
+  color: var(--black);
 }
 
 /* Search hotels */
 
 .search-hotels {
-  background-color: var(--white);
-  text-align: center;
   line-height: 24px;
+  text-align: center;
 }
 
 .question {
   font-size: 30px;
   font-weight: 700;
-}
-
-p.question + p {
-  color: var(--small-text);
+  color: var(--black);
 }
 
 .search-hotels button {
@@ -191,11 +225,12 @@ p.question + p {
   font-size: 14px;
   line-height: 26px;
   font-weight: 700;
-  background-color: var(--white);
+  color: var(--black);
   box-shadow: 0px 7px 15px var(--box-shadow-form);
 }
 
 .search-item input {
+  font-weight: 700;
   background-color: var(--background-other);
   border: 0;
 }
@@ -209,10 +244,18 @@ p.question + p {
   border: 2px solid var(--border);
 }
 
+.search-item input[type="text"]::placeholder {
+  color: var(--black);
+}
+
+.search-item input[type="text"]::-ms-input-placeholder {
+  color: var(--black);
+}
+
 /* Map */
 
 .map {
-  background-color: var(--background-other);
+  background-color: var(--background-map);
   text-align: center;
 }
 
@@ -256,7 +299,7 @@ p.question + p {
 /* Copyright */
 
 .footer-copyright a {
-  color: var(--white);
+  color: var(--html-academy);
 }
 
 .footer-copyright a:hover,
@@ -268,18 +311,86 @@ p.question + p {
   color: var(--html-academy-active);
 }
 
-/* Catalog */
+/* Filters */
 
-.catalog {
+.filter {
+  color: var(--white);
+  background-color: var(--background-mountain);
+  background-image: url("../img/background.jpg");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.filter legend{
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.filter ul {
+  list-style: none;
+}
+
+.filter-input-checkbox:disabled + label {
+  color: var(--checkbox-blocked);
+}
+
+.filter input[type="number"] {
+  color: var(--white);
+  background-color: transparent;
+  border: 2px solid var(--white)
+}
+
+.button-3 {
+  line-height: 21px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  color: var(--white);
+  background-color: transparent;
+  border: 2px solid var(--white);
+}
+
+.button-3:hover,
+.button-3:focus {
+  color: var(--black);
   background-color: var(--white);
 }
+
+/* Sorting*/
+
+.sorting {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--black);
+}
+
+.sorting h2 + p {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.sorting a {
+  color: var(--sorting-link);
+}
+
+.sorting a:hover,
+.sorting a:focus {
+  color: var(--theme-color);
+}
+
+.sorting a:active {
+  color: var(--black);
+}
+
+/* Catalog */
 
 .catalog-list {
   list-style: none;
 }
 
 a.item-link {
-  color: var(--basic-black);
+  color: var(--black);
 }
 
 a.item-link:hover,
@@ -295,10 +406,6 @@ a.item-link:active {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
-}
-
-.catalog-item span {
-  color: var(--small-text);
 }
 
 .rating {
