@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>Седона Главная</title>
@@ -8,11 +8,12 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
 
-  <body>
+  <body class="page-body">
+  <div class="wrapper">
     <header class="header">
       <a class="header-logo">
         <img src="img/logo-sedona.svg" width="138" height="70"
-          alt="Логотип компании Седона">
+             alt="Логотип компании Седона">
       </a>
       <nav class="main-navigation">
         <ul class="navigation-list">
@@ -29,69 +30,59 @@
         <div class="introduction-picture">
           <h1 class="visually-hidden">Сервис поиска жилья в городке Седона</h1>
           <img src="img/welcome.svg" width="456" height="350"
-            lang="en" alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks!">
+               lang="en" alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks!">
         </div>
         <p>Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
       </div>
       <section class="features">
         <h2>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</h2>
         <ol class="features-list">
-          <li class="feature-item">
-            <h3>
+          <li class="feature-item feature-main">
+            <div>
               <span>— №1 —</span>
-              Настоящий городок
-            </h3>
-            <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-            <p>
-              <img src="img/town.jpg" width="800" height="256"
-                alt="городской пейзаж">
-            </p>
+              <h3 class="feature-heading">Настоящий городок</h3>
+              <p class="feature-text-1">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+            </div>
+            <img class="feature-img" src="img/town.jpg" width="800" height="256"
+                 alt="городской пейзаж">
             <ul class="features-list-extra">
               <li>
                 <h4>Жильё</h4>
-                <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+                <p class="extra-text-1">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
               </li>
               <li>
                 <h4>Еда</h4>
-                <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+                <p class="extra-text-2">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
               </li>
               <li>
                 <h4>Сувениры</h4>
-                <p>Не только китайского, но и местного производства!</p>
+                <p class="extra-text-3">Не только китайского, но и местного производства!</p>
               </li>
             </ul>
           </li>
-          <li class="feature-item">
-            <h3>
+          <li class="feature-item feature-main">
+            <div>
               <span>— №2 —</span>
-              Там есть Мост Дьявола
-            </h3>
-            <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-            <p>
-              <img src="img/devils-bridge.jpg" width="800" height="256"
-                alt="арочный каменный мост">
-            </p>
+              <h3 class="feature-heading">Там есть Мост Дьявола</h3>
+              <p class="feature-text-2">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+            </div>
+            <img class="feature-img" src="img/devils-bridge.jpg" width="800" height="256"
+                 alt="арочный каменный мост">
           </li>
-          <li class="feature-item">
-            <h3>
-              <span>— №3 —</span>
-              Небольшая площадь
-            </h3>
-            <p>Все достопримечательности находятся очень близко</p>
+          <li class="feature-item feature-other">
+            <span>— №3 —</span>
+            <h3 class="feature-heading">Небольшая площадь</h3>
+            <p class="feature-text-3">Все достопримечательности находятся очень близко</p>
           </li>
-          <li class="feature-item">
-            <h3>
-              <span>— №4 —</span>
-              Красивая дорога
-            </h3>
-            <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+          <li class="feature-item feature-other">
+            <span>— №4 —</span>
+            <h3 class="feature-heading">Красивая дорога</h3>
+            <p class="feature-text-4">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </li>
-          <li class="feature-item">
-            <h3>
-              <span>— №5 —</span>
-              Мало туристов
-            </h3>
-            <p>Большинство едет в Гранд Каньон и толпится там</p>
+          <li class="feature-item feature-other">
+            <span>— №5 —</span>
+            <h3 class="feature-heading">Мало туристов</h3>
+            <p class="feature-text-5">Большинство едет в Гранд Каньон и толпится там</p>
           </li>
         </ol>
       </section>
@@ -100,62 +91,67 @@
         <p class="question">Заинтересовались?</p>
         <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в
           Cедоне</p>
-        <button class="button button-2" type="button">Поиск гостиницы в Седоне</button>
+        <button class="button button-2 open-form-button" type="button">Поиск гостиницы в Седоне</button>
         <!---форма-->
         <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-          <p class="search-item">
+          <p class="search-item search-item-date">
             <label for="datein">Дата заезда:</label>
-            <input id="datein" type="text" name="datein" placeholder="24 апреля 2017" aria-label="поле ввода даты заезда">
+            <input id="datein" type="text" name="datein" placeholder="24 апреля 2017"
+                   aria-label="поле ввода даты заезда">
             <button type="button" aria-label="отметить в календаре дату заезда">
               <span class="visually-hidden">календарь</span>
             </button>
           </p>
-          <p class="search-item">
+          <p class="search-item search-item-date">
             <label for="dateout">Дата выезда:</label>
-            <input id="dateout" type="text" name="dateout" placeholder="4 июля 2017" aria-label="поле ввода даты выезда">
+            <input id="dateout" type="text" name="dateout" placeholder="4 июля 2017"
+                   aria-label="поле ввода даты выезда">
             <button type="button" aria-label="отметить в календаре дату выезда">
               <span class="visually-hidden">календарь</span>
             </button>
           </p>
-          <p class="search-item">
+          <p class="search-item search-item-number">
             <label for="number-adult">Взрослые:</label>
-            <button type="button" aria-label="уменьшить количество взрослых">
+            <button class="number-button" type="button" aria-label="уменьшить количество взрослых">
               <span class="visually-hidden">-</span>
             </button>
-            <input id="number-adult" type="number" name="number-adult" value="2" aria-label="поле для ввода количества взрослых">
-            <button type="button" aria-label="увеличить количество взрослых">
+            <input id="number-adult" type="number" name="number-adult" value="2"
+                   aria-label="поле для ввода количества взрослых">
+            <button class="number-button" type="button" aria-label="увеличить количество взрослых">
               <span class="visually-hidden">+</span>
             </button>
             <label for="number-children">Дети:</label>
-            <button type="button" aria-label="уменьшить количество детей">
+            <button class="number-button" type="button" aria-label="уменьшить количество детей">
               <span class="visually-hidden">-</span>
             </button>
-            <input id="number-children" type="number" name="number-children" value="0" aria-label="поле для ввода количества детей">
-            <button type="button" aria-label="увеличить количество детей">
+            <input id="number-children" type="number" name="number-children" value="0"
+                   aria-label="поле для ввода количества детей">
+            <button class="number-button" type="button" aria-label="увеличить количество детей">
               <span class="visually-hidden">+</span>
             </button>
           </p>
-          <button class="button button-1" type="submit" aria-label="найти предложения гостиниц">Найти</button>
+          <button class="button button-1 search-button" type="submit" aria-label="найти предложения гостиниц">Найти
+          </button>
         </form>
       </section>
       <section class="map">
         <h2 class="visually-hidden">Как до нас добраться</h2>
-        <p>
-          <img src="img/map.jpg" width="1199" height="594" alt="карта проезда в Седону">
-        </p>
+        <img class="map-image" src="img/map.jpg" width="1199" height="593" alt="карта проезда в Седону">
       </section>
     </main>
 
-    <footer  class="footer">
+    <footer class="footer">
       <section class="footer-contacts">
         <h2 class="visually-hidden">Наши контакты</h2>
-        <p lang="en">#visitSEDONA</p>
+        <p class="footer-contacts-hashtag" lang="en">#visitSEDONA</p>
         <p>
           тел:
           <a href="tel:+74956660166" aria-label="телефон для связи +74956660166">+7(495) 666-01-66</a>
         </p>
-
-        <ul class="footer-social">
+      </section>
+      <section class="footer-social">
+        <h2 class="visually-hidden">Мы в соцсетях</h2>
+        <ul class="footer-social-list">
           <li>
             <a class="social-button" href="https://twitter.com/">
               <span class="visually-hidden">Седона в Твиттере</span>
@@ -177,12 +173,13 @@
         Website by
         <a href="https://htmlacademy.ru/intensive/htmlcss">
           <img src="img/logo-htmlacademy.svg" width="115" height="41"
-            alt="HTML Academy">
-            <span class="visually-hidden">
+               alt="HTML Academy">
+          <span class="visually-hidden">
               Website by HTML Academy
             </span>
         </a>
       </p>
     </footer>
+  </div>
   </body>
 </html>
