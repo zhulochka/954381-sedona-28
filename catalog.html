@@ -31,7 +31,7 @@
         <h2 class="visually-hidden">Подбор гостиниц по параметрам</h2>
         <!-- форма подбора гостиниц-->
         <form class="filter" method="get" action="https://echo.htmlacademy.ru">
-          <fieldset>
+          <fieldset class="fieldset-check">
             <legend class="filter-legend">Инфраструктура:</legend>
             <ul class="filter-list">
               <li class="filter-list-item">
@@ -48,7 +48,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset>
+          <fieldset class="fieldset-check">
             <legend class="filter-legend">Тип жилья:</legend>
             <ul class="filter-list">
               <li class="filter-list-item">
@@ -65,7 +65,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset>
+          <fieldset class="fieldset-range-price">
             <legend class="filter-legend">
               <label for="range-price-min">Стоимость в сутки (Р):</label>
             </legend>
@@ -89,22 +89,20 @@
               Показать
             </button>
           </fieldset>
-
         </form>
       </section>
       <section class="sorting">
         <h2 class="visually-hidden">Сортировка списка гостиниц</h2>
-        <!-- сортировка списка гостиниц-->
-        <p>Найдено: 3</p>
-        <p>Сортировка:</p>
-        <ul class="sorting-catigories">
+        <p class="sorting-results">Найдено: 3</p>
+        <p class="sorting-text">Сортировка:</p>
+        <ul class="sorting-list sorting-catigories">
           <li><a href="#"><span class="visually-hidden">сортировка </span>По цене</a></li>
           <li><a href="#"><span class="visually-hidden">сортировка </span>По типу</a></li>
           <li><a href="#"><span class="visually-hidden">сортировка </span>По рейтингу</a></li>
         </ul>
-        <ul class="sorting-controls">
-          <li><a href="#"><span class="visually-hidden">сортировка по возрастанию</span></a></li>
-          <li><a href="#"><span class="visually-hidden">сортировка по убыванию</span></a></li>
+        <ul class="sorting-list sorting-controls">
+          <li class="sorting-controls-item sorting-controls-up"><a href="#"><span class="visually-hidden">сортировка по возрастанию</span></a></li>
+          <li class="sorting-controls-item sorting-controls-down"><a href="#"><span class="visually-hidden">сортировка по убыванию</span></a></li>
         </ul>
       </section>
       <section class="catalog">
@@ -128,7 +126,9 @@
               <a class="button button-2 catalog-button" href="#">Забронировать</a>
             </div>
             <div class="wrap-rating">
-              <p class="visually-hidden">Звездная классификация гостиницы: 4 звезды</p>
+              <p class="catalog-item-stars four-stars">
+                <span class="visually-hidden">Звездная классификация гостиницы: 4 звезды</span>
+              </p>
               <p class="rating">Рейтинг: 8,5</p>
             </div>
           </li>
@@ -150,7 +150,9 @@
               <a class="button button-2 catalog-button" href="#">Забронировать</a>
             </div>
             <div class="wrap-rating">
-              <p class="visually-hidden">Звездная классификация гостиницы: 3 звезды</p>
+              <p class="catalog-item-stars three-stars">
+                <span class="visually-hidden">Звездная классификация гостиницы: 3 звезды</span>
+              </p>
               <p class="rating">Рейтинг: 8,9</p>
             </div>
           </li>
@@ -173,7 +175,9 @@
               <a class="button button-2 catalog-button" href="#">Забронировать</a>
             </div>
             <div class="wrap-rating">
-              <p class="visually-hidden">Звездная классификация гостиницы: 2 звезды</p>
+              <p class="catalog-item-stars two-stars">
+                <span class="visually-hidden">Звездная классификация гостиницы: 2 звезды</span>
+              </p>
               <p class="rating">Рейтинг: 9,2</p>
             </div>
           </li>
