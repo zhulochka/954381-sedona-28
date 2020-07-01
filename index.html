@@ -98,7 +98,7 @@
             <label for="datein">Дата заезда:</label>
             <input id="datein" type="text" name="datein" placeholder="24 апреля 2017"
                    aria-label="поле ввода даты заезда">
-            <button type="button" aria-label="отметить в календаре дату заезда">
+            <button class="button-form-decor button-decor-calendar" type="button" aria-label="отметить в календаре дату заезда">
               <span class="visually-hidden">календарь</span>
             </button>
           </p>
@@ -106,30 +106,34 @@
             <label for="dateout">Дата выезда:</label>
             <input id="dateout" type="text" name="dateout" placeholder="4 июля 2017"
                    aria-label="поле ввода даты выезда">
-            <button type="button" aria-label="отметить в календаре дату выезда">
+            <button class="button-form-decor button-decor-calendar" type="button" aria-label="отметить в календаре дату выезда">
               <span class="visually-hidden">календарь</span>
             </button>
           </p>
-          <p class="search-item search-item-number">
+          <div class="search-item-wrapper">
+          <p class="search-item search-item-number search-item-adult">
             <label for="number-adult">Взрослые:</label>
-            <button class="number-button" type="button" aria-label="уменьшить количество взрослых">
+            <button class="button-form-decor number-button button-decor-minus" type="button" aria-label="уменьшить количество взрослых">
               <span class="visually-hidden">-</span>
             </button>
             <input id="number-adult" type="number" name="number-adult" value="2"
                    aria-label="поле для ввода количества взрослых">
-            <button class="number-button" type="button" aria-label="увеличить количество взрослых">
+            <button class="button-form-decor number-button button-decor-plus" type="button" aria-label="увеличить количество взрослых">
               <span class="visually-hidden">+</span>
             </button>
+          </p>
+            <p class="search-item search-item-number search-item-children">
             <label for="number-children">Дети:</label>
-            <button class="number-button" type="button" aria-label="уменьшить количество детей">
+            <button class="button-form-decor number-button button-decor-minus" type="button" aria-label="уменьшить количество детей">
               <span class="visually-hidden">-</span>
             </button>
             <input id="number-children" type="number" name="number-children" value="0"
                    aria-label="поле для ввода количества детей">
-            <button class="number-button" type="button" aria-label="увеличить количество детей">
+            <button class="button-form-decor number-button button-decor-plus" type="button" aria-label="увеличить количество детей">
               <span class="visually-hidden">+</span>
             </button>
           </p>
+          </div>
           <button class="button button-1 search-button" type="submit" aria-label="найти предложения гостиниц">Найти
           </button>
         </form>
