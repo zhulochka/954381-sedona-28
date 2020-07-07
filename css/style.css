@@ -38,15 +38,8 @@
 
 /* Global */
 
-html {
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
 body {
+  box-sizing: border-box;
   min-width: 1200px;
   margin: 0;
   padding: 0;
@@ -59,6 +52,10 @@ body {
   background-color: var(--background-other);
 }
 
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 a {
   text-decoration: none;
 }
@@ -66,6 +63,21 @@ a {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .header {
@@ -407,6 +419,7 @@ li.feature-item-small {
   vertical-align: middle;
   text-transform: uppercase;
   border: none;
+  cursor: pointer;
 }
 
 .button-1 {
@@ -437,7 +450,22 @@ li.feature-item-small {
   background-color: var(--button-2-active);
 }
 
+.button-2:focus {
+  outline: 5px auto var(--theme-color);
+}
+
+.button:-moz-focusring,
+.social-button:-moz-focusring {
+  outline: thin dotted var(--theme-color);
+  outline-offset: 1px;
+}
+
 /* Search-form */
+
+.search-form-wrapper {
+  width: 100%;
+  position: relative;
+}
 
 .search-form {
   margin: 0 auto;
@@ -452,6 +480,10 @@ li.feature-item-small {
   color: var(--black);
   box-shadow: 0 7px 15px var(--box-shadow-form);
   text-align: left;
+  position: absolute;
+  background-color: var(--white);
+  right: 16px;
+  top: 0;
 }
 
 .search-item {
@@ -502,17 +534,6 @@ li.feature-item-small {
   text-align: center;
 }
 
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  appearance: none;
-  margin: 0;
-}
-
-input[type="number"] {
-  -moz-appearance: textfield;
-}
-
 .search-item-number {
   margin-bottom: 45px;
 }
@@ -553,7 +574,6 @@ input[type="number"] {
   padding: 0;
   position: absolute;
   border: none;
-  background-color: transparent;
   cursor: pointer;
 }
 
@@ -561,6 +581,7 @@ input[type="number"] {
   padding: 4px 0 0 0;
   top: 0;
   right: 0;
+  background-color: transparent;
 }
 
 .button-decor-calendar path {
@@ -577,51 +598,41 @@ input[type="number"] {
 }
 
 .number-button {
-  display: inline-block;
   margin: 0;
   padding: 0;
   font-weight: 700;
   text-align: center;
-  color: var(--black);
   vertical-align: middle;
   text-transform: uppercase;
   border: none;
-  width: 12px;
-  height: 12px;
-  background-color: transparent;
+  color: var(--form-icon);
+  background-color: var(--background-other);
 }
 
 .number-button span {
-  width: 38px;
-  height: 38px;
   display: inline-block;
   font-size: 26px;
-  padding: 5px 12px 10px;
   vertical-align: middle;
 }
 
 .search-item-children .button-decor-minus {
-  right: 100px;
-  bottom: 25px;
+  right: 76px;
+  bottom: 0;
 }
 
 .search-item-adult .button-decor-minus {
-  right: 101px;
-  bottom: 25px;
+  right: 76px;
+  bottom: 0;
 }
 
 .search-item-children .button-decor-plus {
-  right: 25px;
-  bottom: 25px;
+  right: 0;
+  bottom: 0;
 }
 
 .search-item-adult .button-decor-plus {
-  right: 26px;
-  bottom: 25px;
-}
-
-.number-button {
-  color: var(--form-icon);
+  right: 1px;
+  bottom: 0;
 }
 
 .number-button:hover,
@@ -642,6 +653,7 @@ input[type="number"] {
 /* Map */
 .map {
   margin: 0;
+  margin-bottom: -126px;
   padding: 0;
 }
 
@@ -650,13 +662,14 @@ input[type="number"] {
   height: 593px;
   text-align: center;
   margin: 0;
+  /*margin-top: -594px;*/
   padding: 0;
   background-color: var(--background-map);
 }
 
 .map iframe {
   width: 1200px;
-  height: 593px;
+  height: 594px;
   border: 0;
 }
 
@@ -670,6 +683,7 @@ input[type="number"] {
   line-height: 26px;
   color: var(--black);
   background-color: var(--footer);
+  z-index: 3;
 }
 
 .footer-contacts {
@@ -837,6 +851,7 @@ input[type="number"] {
 
 .filter-list-item {
   margin-bottom: 25px;
+  position: relative;
 }
 
 .filter-list-item:last-child {
@@ -849,6 +864,11 @@ input[type="number"] {
   cursor: pointer;
   user-select: none;
   vertical-align: middle;
+}
+
+.filter-input-checkbox {
+  bottom: 10px;
+  right: 124px;
 }
 
 .filter-input-checkbox:not(:checked) + label::before {
@@ -899,8 +919,10 @@ input[type="number"] {
 
 .filter-input-checkbox:focus + label::before {
   outline: thin dotted;
+}
+
+.filter-input-checkbox:focus + label::before {
   outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: 1px;
 }
 
 /* Range-filter */
@@ -916,9 +938,9 @@ input[type="number"] {
 .price-controls {
   position: relative;
   margin-bottom: 5px;
-  padding: 5px 8px 6px 5px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  padding: 5px 0 6px 0;
+  display: flex;
+  justify-content: space-between;
   border: 2px solid var(--white);
   border-radius: 2px;
 }
@@ -936,22 +958,49 @@ input[type="number"] {
 
 .price-wrapper {
   position: relative;
-  justify-self: end;
+  display: flex;
+  justify-content: space-between;
 }
 
-.price-controls label {
+.min-price-wrapper {
+  padding-left: 65px;
+  width: 157px;
+}
+
+.max-price-wrapper {
+  width: 102px;
+}
+
+.price-wrapper label {
   margin: 0;
   padding: 0;
 }
 
-.price-controls input[type="number"] {
-  margin: 0;
+.price-wrapper input {
   padding: 0;
+  font: inherit;
   color: var(--white);
   background-color: transparent;
-  width: 70px;
-  text-transform: inherit;
   border: none;
+}
+
+.min-price-wrapper input {
+  width: 70px;
+}
+
+.max-price-wrapper input {
+  width: 78px;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 .range-controls {
@@ -1003,17 +1052,14 @@ input[type="number"] {
 }
 
 .filter-button {
-  display: block;
+  font-weight: inherit;
   width: 137px;
   padding: 5px 30px 6px 30px;
   line-height: 21px;
-  text-transform: uppercase;
   margin: 0 85px;
-  color: var(--white);
   background-color: transparent;
   border: 2px solid var(--white);
   border-radius: 2px;
-  vertical-align: middle;
 }
 
 .filter-button:hover,
@@ -1037,12 +1083,6 @@ input[type="number"] {
   border-bottom: 1px solid var(--border);
 }
 
-.sorting-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
 .sorting-results {
   width: 135px;
   margin: 0;
@@ -1058,6 +1098,12 @@ input[type="number"] {
   margin-right: 40px;
   padding-top: 2px;
   align-self: start;
+}
+
+.sorting-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .sorting-categories {
@@ -1278,39 +1324,4 @@ a.item-link:active {
   background-color: var(--background-other);
 }
 
-/* Layers */
 
-.search-form-wrapper {
-  width: 100%;
-  position: relative;
-}
-
-.search-form {
-  position: absolute;
-  background-color: var(--white);
-  right: 16px;
-  top: 0;
-}
-
-.map {
-  margin-bottom: -126px;
-}
-
-.footer {
-  z-index: 1;
-}
-
-.visually-hidden:not(:focus):not(:active),
-input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
