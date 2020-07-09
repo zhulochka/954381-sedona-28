@@ -3,9 +3,6 @@ var searchForm = document.querySelector(".search-form");
 var dateinInput = searchForm.querySelector(".datein-input");
 var dateoutInput = searchForm.querySelector(".dateout-input");
 var numberAdultInput = searchForm.querySelector(".number-adult-input");
-var numberChildrenInput = searchForm.querySelector(".number-children-input");
-var todayDate = new Date();
-var message = "";
 
 var isStorageSupport = true;
 var storage = "";
@@ -37,7 +34,6 @@ searchForm.addEventListener("submit", function (evt) {
     errorMessage.classList.add("error-message");
     errorMessage.textContent = 'Заполните, пожалуйста, дату';
     searchForm.classList.remove("search-form-error");
-    searchForm.removeChild("errorMessage");
     searchForm.offsetWidth = searchForm.offsetWidth;
     searchForm.classList.add("search-form-error");
   } else {
