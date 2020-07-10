@@ -15,12 +15,11 @@ try {
 
 searchForm.classList.remove("search-form-show");
 searchForm.classList.add("search-form-close");
-
 openFormButton.addEventListener("click", function () {
   searchForm.classList.toggle("search-form-close");
   searchForm.classList.toggle("search-form-show");
   searchForm.classList.remove("search-form-error");
-  dateinInput.focus();
+    dateinInput.focus();
   if (storage) {
     numberAdultInput.value = storage;
   }
@@ -37,8 +36,10 @@ searchForm.addEventListener("submit", function (evt) {
     searchForm.offsetWidth = searchForm.offsetWidth;
     searchForm.classList.add("search-form-error");
   } else {
+
     if (isStorageSupport) {
       localStorage.setItem("number", numberAdultInput.value);
     }
   }
 });
+

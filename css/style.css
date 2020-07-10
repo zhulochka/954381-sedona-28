@@ -168,6 +168,10 @@ input[type="radio"].visually-hidden {
   color: var(--sorting-link);
 }
 
+.main {
+
+}
+
 /* Introduction */
 
 .introduction {
@@ -210,6 +214,9 @@ input[type="radio"].visually-hidden {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
 }
 
 .features-list {
@@ -379,9 +386,17 @@ li.feature-item-small {
 .search-hotels {
   padding-left: 300px;
   padding-right: 300px;
-  padding-top: 20px;
+
   line-height: 24px;
   text-align: center;
+}
+
+.search-hotels-container {
+  padding-top: 20px;
+  background-color: var(--white);
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
 }
 
 .question {
@@ -460,6 +475,32 @@ li.feature-item-small {
   outline-offset: 1px;
 }
 
+/* Modal form*/
+
+
+
+.search-form-close {
+  display: none;
+}
+
+
+.search-form-show {
+  display: block;
+  animation: smooth 1.9s ease-in-out;
+}
+
+
+.search-form-error {
+  animation: shake 0.6s;
+}
+
+.error-message {
+  left: 181px;
+  bottom: 340px;
+  position: absolute;
+  color: var(--background-map);
+}
+
 /* Search-form */
 
 .search-form-wrapper {
@@ -485,6 +526,8 @@ li.feature-item-small {
   right: 16px;
   top: 0;
 }
+
+
 
 .search-item {
   margin: 0;
@@ -560,6 +603,7 @@ li.feature-item-small {
 .search-item input::placeholder {
   color: var(--black);
 }
+
 
 .search-button {
   width: 458px;
@@ -644,34 +688,14 @@ li.feature-item-small {
   color: var(--theme-color);
 }
 
-/* Modal form*/
-
-.search-form-close {
-  display: none;
-}
-
-.search-form-show {
-  display: block;
-  /*animation: bounce 1.9s;*/
-}
-
-.search-form-error {
-  animation: shake 0.6s;
-}
-
-.error-message {
-  left: 181px;
-  bottom: 340px;
-  position: absolute;
-  color: var(--background-map);
-}
-
 /* Map */
 
 .map {
   margin: 0;
   margin-bottom: -126px;
   padding: 0;
+
+
 }
 
 .map-image {
@@ -700,7 +724,7 @@ li.feature-item-small {
   line-height: 26px;
   color: var(--black);
   background-color: var(--footer);
-  z-index: 3;
+
 }
 
 .footer-contacts {
@@ -1343,25 +1367,13 @@ a.item-link:active {
 
 
 /* Animations */
-/*
-@keyframes bounce {
+
+@keyframes smooth {
   0% {
-    transform: translateY(-2000px);
-  }
-
-  70% {
-    transform: translateY(30px);
-  }
-
-  90% {
-    transform: translateY(-10px);
-  }
-
-  100% {
-    transform: translateY(0);
+    transform: translateY(-395px);
   }
 }
-*/
+
 
 @keyframes shake {
   0%,
