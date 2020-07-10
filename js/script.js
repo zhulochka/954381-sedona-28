@@ -3,7 +3,6 @@ var searchForm = document.querySelector(".search-form");
 var dateinInput = searchForm.querySelector(".datein-input");
 var dateoutInput = searchForm.querySelector(".dateout-input");
 var numberAdultInput = searchForm.querySelector(".number-adult-input");
-
 var isStorageSupport = true;
 var storage = "";
 
@@ -19,7 +18,10 @@ openFormButton.addEventListener("click", function () {
   searchForm.classList.toggle("search-form-close");
   searchForm.classList.toggle("search-form-show");
   searchForm.classList.remove("search-form-error");
-    dateinInput.focus();
+  if (document.querySelector("p.error-message")) {
+    document.querySelector('p.error-message').remove()
+  }
+  dateinInput.focus();
   if (storage) {
     numberAdultInput.value = storage;
   }
@@ -36,7 +38,6 @@ searchForm.addEventListener("submit", function (evt) {
     searchForm.offsetWidth = searchForm.offsetWidth;
     searchForm.classList.add("search-form-error");
   } else {
-
     if (isStorageSupport) {
       localStorage.setItem("number", numberAdultInput.value);
     }
