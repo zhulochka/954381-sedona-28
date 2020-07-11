@@ -19,7 +19,7 @@ openFormButton.addEventListener("click", function () {
   searchForm.classList.toggle("search-form-show");
   searchForm.classList.remove("search-form-error");
   if (document.querySelector("p.error-message")) {
-    document.querySelector('p.error-message').remove()
+    document.querySelector("p.error-message").remove()
   }
   dateinInput.focus();
   if (storage) {
@@ -30,10 +30,10 @@ openFormButton.addEventListener("click", function () {
 searchForm.addEventListener("submit", function (evt) {
   if (!dateinInput.value || !dateoutInput.value) {
     evt.preventDefault();
-    var errorMessage = document.createElement('p');
+    var errorMessage = document.createElement("p");
     searchForm.append(errorMessage);
     errorMessage.classList.add("error-message");
-    errorMessage.textContent = 'Заполните, пожалуйста, дату';
+    errorMessage.textContent = "Заполните, пожалуйста, дату";
     searchForm.classList.remove("search-form-error");
     searchForm.offsetWidth = searchForm.offsetWidth;
     searchForm.classList.add("search-form-error");
